@@ -22,30 +22,6 @@ main {
   animation: fadeIn 1.5s ease-in;
 }
 
-.overlay {
-  position: absolute;
-  bottom: 0;
-  background: rgba(0,0,0,0.6);
-  color: white;
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-  opacity: 0;
-  transition: 0.3s ease-in-out;
-}
-
-.slide-in {
-  animation: slideIn 1s ease-out forwards;
-  transform: translateX(-50px);
-  opacity: 0;
-}
-@keyframes slideIn {
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 section.card {
   background: #fff;
   padding: 25px;
@@ -55,7 +31,6 @@ section.card {
   box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 section.card:hover {
   transform: translateY(-5px);
@@ -103,8 +78,33 @@ footer {
   color: #333;
   font-size: 14px;
 }
-
-
+button {
+  transition: 0.3s ease;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+}
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #4CAF50;
+}
+.typing-text::after {
+  content: "|";
+  animation: typing 4s steps(20) infinite;
+}
+@keyframes typing {
+  0% { content: "a Web Developer|"; }
+  25% { content: "a Designer|"; }
+  50% { content: "a Learner|"; }
+  75% { content: "Naveena|"; }
+  100% { content: "a Web Developer|"; }
+}
+html {
+  scroll-behavior: smooth;
+}
 
 /* Animation */
 @keyframes fadeIn {
